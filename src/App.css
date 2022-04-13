@@ -2,6 +2,10 @@
   text-align: center;
 }
 
+*{
+  font-family:opensans,sans-serif;
+}
+
 .App-logo {
   height: 40vmin;
   pointer-events: none;
@@ -22,6 +26,7 @@
   justify-content: center;
   font-size: calc(10px + 2vmin);
   color: white;
+
 }
 
 .App-link {
@@ -35,4 +40,178 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+#header{
+  font-size: 5rem;
+  font-weight: bold;
+  text-align: center;
+  color: #418f43;
+
+  	
+}
+
+.catBox{
+
+  background-color: #CD5334;
+  color: white;
+  padding: 25px;
+  margin:15px;
+  border-radius:15px;
+  text-align: center;
+
+}
+
+
+.toolBar >Button {
+background-color: #418f43;
+width: 100%;
+margin-top: 20px;
+border:none;
+
+
+}
+
+
+.addObject{
+  z-index: 1000;
+  position: absolute;
+  /* display: none; */
+  width: 90%;
+  height: 600px;;
+  background-color: #FAD8D6;
+  margin: auto;
+
+  
+}
+
+
+#newCatName{
+  width: 100%;
+}
+
+.addProduct {
+  width: 50%;
+}
+
+.addSample{
+  width: 33%;
+}
+
+#cats{
+  margin-top:30px;
+
+}
+
+
+.custButt{
+  background-color: transparent !important ;
+  width: 100%;
+  border: none;
+  color: white;
+}
+.custButt:active{
+  background-color: transparent !important ;
+  width: 100%;
+  border: none;
+  color: white;
+
+}
+
+.dropDown{
+  width: 100%;
+  background-color:green;
+  color: white;
+}
+
+#newProductSelect{
+
+  width:50%;
+}
+#newSampleSelect{
+
+  width:50%;
+}
+ul{
+  list-style-type: none;
+}
+li
+
+
+#sampleDetailsList > ul >li{
+
+  color: #008000 !important;
+
+}
+
+.sampleDis{
+  width: 100%;
+  margin: auto;
+  padding: 15px;
+  /* background-color: #418f43; */
+  margin-top: 60px;
+  border-radius: 15px;
+  color: #418f43;
+  box-shadow: rgba(0, 0, 0, 0.2) 0px 12px 28px 0px, rgba(0, 0, 0, 0.1) 0px 2px 4px 0px, rgba(255, 255, 255, 0.05) 0px 0px 0px 1px inset;
+
+}
+h3{
+  display: inline-block;
+  padding-right: 10px;
+}
+h2{
+  color:#418f43;
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.sampleDetailItem{
+  text-align:justify;
+  color:#418f43;
+  font-size: 1rem;
+  white-space: nowrap;
+}
+
+#search{
+
+  margin: auto;
+  margin-bottom:40px;
+}
+
+.sampleImage{
+  text-align:center;
+  max-width: 100%;
+
+}
+
+.sampleControls{
+  color: white;
+  text-align:center;
+}
+
+
+.sampleControls > Button{
+  color: white;
+  text-align:center;
+  width: 90%;
+  margin: 10px;
+  background-color:#F39B6D;
+  border: none
+}
+
+
+.sampleOrder{
+
+
+}
+
+.modal-content{
+  box-shadow: rgba(0, 0, 0, 0.15) 0px 2px 8px;   
+   height: 800px;
+  border: none;
+  color: white;
+}
+
+.addBtn{
+  margin-top: 20px;
 }
