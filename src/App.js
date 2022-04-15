@@ -20,10 +20,10 @@ const images = importAll(require.context('./photos', false, /\.(png|jpe?g|svg)$/
 function DisplaySearchResults(data){
 function addInventory(id){
 
-  fetch(`https://samples-node.herokuapp.com//addInventory/${id}`)
+  fetch(`https://samples-node.herokuapp.com/addInventory/${id}`)
 }
 function subtractInventory(id){
-  fetch(`https://samples-node.herokuapp.com//subtractInventory/${id}`)
+  fetch(`https://samples-node.herokuapp.com/subtractInventory/${id}`)
 }
   let samples = data.data
   const [show, setShow] = useState(false);
@@ -175,7 +175,7 @@ function addProject(){
    
   }
 
-  fetch(`https://samples-node.herokuapp.com//addProduct/${newProductCat}`, {method: 'POST', Mode: "no-cors", body: JSON.stringify(ots) ,headers: {
+  fetch(`https://samples-node.herokuapp.com/addProduct/${newProductCat}`, {method: 'POST', Mode: "no-cors", body: JSON.stringify(ots) ,headers: {
     'Content-type': 'application/json; charset=UTF-8'
 }})
 
@@ -186,7 +186,7 @@ function addCat(){
     name: newCatName
   
   }
-  fetch("https://samples-node.herokuapp.com//addCat", {method: 'POST', Mode: "no-cors", body: JSON.stringify(ots),headers: {
+  fetch("https://samples-node.herokuapp.com/addCat", {method: 'POST', Mode: "no-cors", body: JSON.stringify(ots),headers: {
     'Content-type': 'application/json; charset=UTF-8'}})
 
 };
@@ -195,7 +195,7 @@ function addCat(){
   let field = searchField
   let term = searchTerm
 
-  fetch(`https://samples-node.herokuapp.com//search/${field}/${term}`)
+  fetch(`https://samples-node.herokuapp.com/search/${field}/${term}`)
   .then(response => response.json())
   .then(data => {
     setSearchResults(data)
@@ -215,7 +215,7 @@ function addSample(){
     inventory: newSampleCount,
     
   }
-  fetch(`https://samples-node.herokuapp.com//addSample/${newSampleProduct}`, {method: 'POST', Mode: "no-cors", body: JSON.stringify(ots),headers: {
+  fetch(`https://samples-node.herokuapp.com/addSample/${newSampleProduct}`, {method: 'POST', Mode: "no-cors", body: JSON.stringify(ots),headers: {
     'Content-type': 'application/json; charset=UTF-8'}})
 };
 const handleOnSearch = (string, results) => {
@@ -246,19 +246,19 @@ const formatResult = (item) => {
 useEffect(()=>{
 
   const bootstrapasyc = async()=>{
-  fetch("https://samples-node.herokuapp.com//cats",{Method: 'GET', Mode: "no-cors"})
+  fetch("https://samples-node.herokuapp.com/cats",{Method: 'GET', Mode: "no-cors"})
   .then(res => res.json())
   .then(data => setCats(data))
   
-  fetch("https://samples-node.herokuapp.com//products",{Method: 'GET', Mode: "no-cors"})
+  fetch("https://samples-node.herokuapp.com/products",{Method: 'GET', Mode: "no-cors"})
   .then(res => res.json())
   .then(data => setProducts(data))
 
-  fetch("https://samples-node.herokuapp.com//allRequests",{Method: 'GET', Mode: "no-cors"})
+  fetch("https://samples-node.herokuapp.com/allRequests",{Method: 'GET', Mode: "no-cors"})
   .then(res => res.json())
   .then(data => setRequests(data))
 
-  fetch("https://samples-node.herokuapp.com//samples",{Method: 'GET', Mode: "no-cors"})
+  fetch("https://samples-node.herokuapp.com/samples",{Method: 'GET', Mode: "no-cors"})
   .then(res => res.json())
   .then(data => {
     
