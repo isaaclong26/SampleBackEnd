@@ -32,12 +32,8 @@ function subtractInventory(id){
   const handleCopy = (x) => {
     console.log(x)
       let ots = `
-        Name: ${x.name}
-        Location: ${x.location}
-        Die: ${x.die}
-        Finish: ${x.finish}
-        
-      `
+       ${x.name}
+       ${x.location}`
     navigator.clipboard.writeText(ots)
 
   }
